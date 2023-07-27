@@ -18,6 +18,15 @@ const GitHubRepositoryExplorer = () => {
       .catch((error) => console.error('Error:', error));
   };
 
+  const handleSearch = () => {
+    fetch(`https://api.github.com/search/repositories?q=${searchTerm}&sort=stars&order=desc`)
+      .then((response) => response.json())
+      .then((data) => {
+        setRepositories(data.items);
+      })
+      .catch((error) => console.error('Error:', error));
+  };
+
 
 };
 
