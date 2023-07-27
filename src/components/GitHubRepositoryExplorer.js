@@ -28,9 +28,20 @@ const GitHubRepositoryExplorer = () => {
   };
 
   return (
+    <div className="github-repository-explorer">
+      <h2>GitHub Repository Explorer</h2>
 
+      <div className="search-form">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search by repository name"
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
 
-
+    </div>
   );
 };
 
