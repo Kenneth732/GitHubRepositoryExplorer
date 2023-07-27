@@ -29,3 +29,12 @@
     cursor: pointer;
   }
   
+  .search-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .repository-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
