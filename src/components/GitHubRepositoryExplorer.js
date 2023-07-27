@@ -9,7 +9,14 @@ const GitHubRepositoryExplorer = () => {
     fetchMostStarredRepositories();
   }, []);
 
-
+  const fetchMostStarredRepositories = () => {
+    fetch('https://api.github.com/search/repositories?q=stars:>1&sort=stars&order=desc')
+      .then((response) => response.json())
+      .then((data) => {
+        setRepositories(data.items);
+      })
+      .catch((error) => console.error('Error:', error));
+  };
 
 
 };
