@@ -41,6 +41,19 @@ const GitHubRepositoryExplorer = () => {
         <button onClick={handleSearch}>Search</button>
       </div>
 
+      <div className="repository-list">
+        {repositories.map((repo) => (
+          <div key={repo.id} className="repository-item">
+            <h3>{repo.name}</h3>
+            <p>{repo.description}</p>
+            <p>Stars: {repo.stargazers_count}</p>
+            <p>Language: {repo.language}</p>
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
