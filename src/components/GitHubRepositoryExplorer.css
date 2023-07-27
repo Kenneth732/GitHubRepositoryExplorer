@@ -62,3 +62,17 @@
     font-weight: bold;
   }
   
+  .repository-item a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .repository-item a:hover {
+    background-color: #0056b3;
+  }
+  
